@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Ejercicio} from '../ejercicio';
+import {EJERCICIOS } from '../collection-ejercicios';
 
 @Component({
   selector: 'app-ejercicios',
@@ -7,16 +8,23 @@ import { Ejercicio} from '../ejercicio';
   styleUrls: ['./ejercicios.component.css']
 })
 export class EjerciciosComponent implements OnInit {
-  ejercico: Ejercicio ={
+  ejercicios = EJERCICIOS;
+  ejercicioSeleccionado:Ejercicio;
+
+ /* ejercico: Ejercicio ={
     id:1,
-    name:"Felxiones",
+    name:"Nombre",
     surname:"Fraile",
     Edad:20
-  }
+  }*/
 
   constructor() { }
 
   ngOnInit(): void {
   }
+onSelectEjercicio(ejercicios:Ejercicio): void{
+  console.log("Ejercicio Selecionado="+ ejercicios.id);
+  this.ejercicioSeleccionado=ejercicios;
 
+}
 }
