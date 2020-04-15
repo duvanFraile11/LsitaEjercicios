@@ -11,13 +11,6 @@ export class EjerciciosComponent implements OnInit {
   ejercicios = EJERCICIOS;
   ejercicioSeleccionado:Ejercicio;
 
- /* ejercico: Ejercicio ={
-    id:1,
-    name:"Nombre",
-    surname:"Fraile",
-    Edad:20
-  }*/
-
   constructor() { }
 
   ngOnInit(): void {
